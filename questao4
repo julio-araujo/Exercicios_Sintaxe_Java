@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        int i;
+        for (i=0;i<101;i++){
+           if (i%3== 0){
+               System.out.print(i+" ");
+           }
+        }
+    }
+}
