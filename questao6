@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        int []v = new int[100];
+        int i=2;
+        boolean trava=true;
+        v[0]=1;
+        v[1]=1;
+        while (trava){
+            v[i]=v[i-1]+v[i-2];
+            if (v[i]>100){
+                trava=false;
+            }
+            else {
+                System.out.print(v[i]+" ");
+                i+=1;
+            }
+        }
+    }
+}
+
+/*Professora, fiz de dois modos pois n sei se a senhora irá
+aceitar o 1° modo, tendo em vista que ele poderia dar problemas para um valor muito grande. Caso a fosse solicitado que o programa imprima todos os valor da sequencia de fibonacci menores que 100000000, por exemplo.
+Obs: n fiz ajustes nos tipos (int para long int)
+
+class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        int a,b,c;
+        boolean trava=true;
+        a=1;
+        b=1;
+        while (trava){
+            c=a+b;
+            if (c>100){
+                trava=false;
+            }
+            else {
+                a=b
+                b=c
+                System.out.print(c+" ");
+            }
+        }
+    }
+}
+*/
