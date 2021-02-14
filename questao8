@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        int n,i,j,cont=0,aux=0;
+        boolean controle=true;
+        n=entrada.nextInt();
+        float[][] matriz = new float[n][n];
+        for (i=0;i<n;i++){
+            for (j=0;j<n;j++){
+                System.out.printf("Digite o elemento %d %d: ",i+1,j+1);
+                matriz[i][j]=entrada.nextInt();
+            }
+        }
+        //verifica diagonal principal
+        for (i=0;i<n;i++){
+            cont+=matriz[i][i];
+        }
+        //verifica diagonal secundaria
+        for (i=0;i<n;i++){
+            aux+=matriz[n-i-1][i];
+        }
+        if (aux!=cont){
+            controle=false;
+        }
+        // verifica linhas
+        for (i=0;i<n;i++){
+            aux=0;
+            for (j=0;j<n;j++){
+                aux+= matriz[i][j];
+            }
+            if (aux!=cont){
+                controle=false;
+            }
+        }
+        //verifica colunnas
+        for (j=0;j<n;j++){
+            aux=0;
+            for (i=0;i<n;i++){
+                aux+= matriz[i][j];
+            }
+            if (aux!=cont){
+                controle=false;
+            }
+        }
+        if (controle){
+            System.out.print("este é um quadrado magico com soma igual a: "+cont+" !");
+        }
+        else {
+            System.out.print("este não é um quadrado magico !");
+        }
+    }
+}
