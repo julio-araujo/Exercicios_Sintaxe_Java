@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        int i,n,cont=1;
+        System.out.println("Digite um numero !");
+        n=entrada.nextInt();
+        if (n>=0){
+           for (i=1;i<=n;i++){
+               cont *= i;
+           }
+           System.out.println("o fatorial de "+n+" é: "+cont);
+        }
+        else {
+            System.out.println("não é possivel calcular o fatorial de "+n);
+        }
+    }
+}
