@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        int i,n,cont=0;
+        System.out.println("Digite a quantidade de numeros:");
+        n = entrada.nextInt();
+        for (i=0;i<n;i++){
+            System.out.println("digite o numero "+(i+1)+":");
+            int j=entrada.nextInt();
+            if (j>0) {
+                cont++;
+            }
+        }
+        System.out.println("Você digitou "+cont+" numeros positivos!");
+    }
+}
